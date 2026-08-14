@@ -240,6 +240,7 @@ fn a_run_persisted_by_the_dashboard_is_readable_by_the_cli() {
         verdict: Some(atlas_plugin::Verdict::pass("fine")),
         metrics: std::collections::BTreeMap::new(),
         log: Vec::new(),
+        dataset_fingerprint: None,
         elapsed: std::time::Duration::from_secs(3),
     };
     s.persist(&frame);
@@ -293,6 +294,7 @@ fn a_run_is_recorded_once_even_if_the_terminal_frame_repeats() {
         verdict: None,
         metrics: std::collections::BTreeMap::new(),
         log: Vec::new(),
+        dataset_fingerprint: None,
         elapsed: std::time::Duration::from_secs(1),
     };
     s.persist(&frame);
